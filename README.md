@@ -19,4 +19,4 @@ Users should be able to:
 
 ### Screenshot
 
-![Screenshot 2025-03-19 at 8.59.33 PM.png](./screenshot.jpg)
+![](./Screenshot 2025-03-19 at 8.59.33 PM.png)
