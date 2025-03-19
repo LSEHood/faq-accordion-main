@@ -1,0 +1,139 @@
+/* styles.css */
+
+/* Remove default arrow in Safari */
+summary {
+    list-style: none; /* Removes the default arrow */
+  }
+  
+  summary::-webkit-details-marker {
+    display: none; /* Hides the arrow in WebKit browsers (Safari) */
+  }
+  
+  /* Ensure the summary element is styled correctly */
+  summary {
+    display: block; /* Ensures the summary behaves like a block element */
+  }
+
+body {
+    font-family: 'Work Sans', sans-serif;
+    background-color: hsl(275, 100%, 97%);
+    color: hsl(292, 42%, 14%);
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between; /* Push content to top and attribution to bottom */
+    min-height: 100vh; /* Ensure container takes full viewport height */
+    width: 80%;
+    padding: 20px;
+    box-sizing: border-box;
+    z-index: 1;
+  }
+  
+  .faq-container {
+    background-color: hsl(0, 0%, 100%);
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    width: 100%;
+    margin-bottom: 20px; /* Add some space between FAQ and attribution */
+    margin-top: 80px;
+  }
+
+.heading {
+  display: flex;
+}
+
+h1 {
+    display: flex;
+    margin-left: 10px;
+    margin-right: 10px;
+  
+  }
+  
+  .faq-item {
+    margin-bottom: 1rem;
+  }
+  
+  .faq-question {
+    font-weight: 600;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .faq-question:hover {
+    color: hsl(281, 68%, 53%);
+  }
+  
+  /* Another way of doing the icons for + and - 
+ .faq-question::after {
+    content: url("./assets/images/icon-plus.svg");
+}
+.faq-item[open] .faq-question::after {
+    content: url("./assets/images/icon-minus.svg");
+}
+      */
+  
+  .faq-answer {
+    margin-top: 1rem;
+    color: hsl(292, 16%, 49%);
+  }
+  
+  .attribution {
+    font-size: 11px;
+    text-align: center;
+    margin-top: auto; /* Push attribution to the bottom */
+  }
+
+  .small-screen,.big-screen {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: auto;
+  }
+
+  .faq-item .open-image {
+    display: none;
+}
+
+.faq-item .close-image {
+    display: block;
+}
+
+.faq-item[open] .open-image {
+    display: block;
+}
+
+.faq-item[open] .close-image {
+    display: none;
+}
+
+@media only screen and (min-width: 512px) {
+    /* tablets and desktop */
+    .small-screen {
+        display: none;
+    }
+    .big-screen {
+        display: block;
+    }
+}
+
+@media only screen and (max-width: 512px) {
+    /* phones */
+    .small-screen {
+        display: block;
+    }
+    .big-screen {
+        display: none;
+    }
+}
